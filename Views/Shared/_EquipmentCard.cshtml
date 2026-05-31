@@ -1,0 +1,15 @@
+@model EquipmentInventory.Models.Equipment
+<div class="card mb-3 shadow-sm">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@Model.Category</h6>
+        <p class="card-text">
+            <strong>Mã TB:</strong> @Model.Id <br />
+            <strong>Đơn giá:</strong> @Model.Price.ToString("N0") VNĐ <br />
+            <strong>Tồn kho:</strong> @Model.StockQuantity <br />
+            <span class="badge @(Model.StockQuantity > 0 ? "bg-success" : "bg-danger")">
+                @(Model.StockQuantity > 0 ? "Còn hàng" : "Hết hàng")
+            </span>
+        </p>
+    </div>
+</div>

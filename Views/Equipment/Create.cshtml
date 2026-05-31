@@ -1,0 +1,26 @@
+@model EquipmentInventory.ViewModels.EquipmentCreateViewModel
+
+<h2>Thêm Thiết Bị Mới</h2>
+<form asp-controller="Equipment" asp-action="Create" method="post" class="mt-3" style="max-width: 500px;">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Tên thiết bị</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Category" class="form-label">Danh mục</label>
+        <input asp-for="Category" class="form-control" />
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label">Đơn giá (VNĐ)</label>
+        <input asp-for="Price" class="form-control" type="number" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="StockQuantity" class="form-label">Số lượng tồn</label>
+        <input asp-for="StockQuantity" class="form-control" type="number" />
+        <span asp-validation-for="StockQuantity" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm mới</button>
+</form>

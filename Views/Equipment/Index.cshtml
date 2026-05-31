@@ -1,0 +1,17 @@
+@model IEnumerable<EquipmentInventory.Models.Equipment>
+
+<h2>Danh sách thiết bị</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <partial name="_EquipmentCard" model="item" />
+        </div>
+    }
+</div>
