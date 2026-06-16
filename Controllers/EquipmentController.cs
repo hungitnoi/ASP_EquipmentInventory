@@ -67,3 +67,5 @@ public class EquipmentController : Controller
            return View(model); // Nếu lỗi thì hiện lại form kèm thông báo lỗi
        }
    }
+
+// reviewed
